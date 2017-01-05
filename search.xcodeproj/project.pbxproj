@@ -19,6 +19,7 @@
 		8466F48C1E1C5893003B531D /* GFGeoHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 8466F4851E1C5893003B531D /* GFGeoHash.m */; };
 		8466F48D1E1C5893003B531D /* GFGeoHashQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 8466F4871E1C5893003B531D /* GFGeoHashQuery.m */; };
 		8466F48E1E1C5893003B531D /* GFQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 8466F4891E1C5893003B531D /* GFQuery.m */; };
+		8466F49B1E1E53A8003B531D /* PokeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8466F49A1E1E53A8003B531D /* PokeAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +27,7 @@
 		65F30AC2CD476865CC5E8224 /* Pods-search.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-search.debug.xcconfig"; path = "Pods/Target Support Files/Pods-search/Pods-search.debug.xcconfig"; sourceTree = "<group>"; };
 		8466F4611E1C54A9003B531D /* search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = search.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8466F4641E1C54A9003B531D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8466F4661E1C54A9003B531D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8466F4661E1C54A9003B531D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
 		8466F4691E1C54A9003B531D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8466F46B1E1C54A9003B531D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8466F46E1E1C54A9003B531D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,6 +49,7 @@
 		8466F4881E1C5893003B531D /* GFQuery+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GFQuery+Private.h"; sourceTree = "<group>"; };
 		8466F4891E1C5893003B531D /* GFQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFQuery.m; sourceTree = "<group>"; };
 		8466F4941E1CDEF2003B531D /* search-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "search-Bridging-Header.h"; sourceTree = "<group>"; };
+		8466F49A1E1E53A8003B531D /* PokeAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeAnnotation.swift; sourceTree = "<group>"; };
 		C9A4A01332161436633A7425 /* Pods-search.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-search.release.xcconfig"; path = "Pods/Target Support Files/Pods-search/Pods-search.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,15 +94,16 @@
 		8466F4631E1C54A9003B531D /* search */ = {
 			isa = PBXGroup;
 			children = (
+				8466F4991E1E5336003B531D /* Model */,
+				8466F4981E1E532F003B531D /* Controller */,
 				8466F4781E1C5893003B531D /* GeoFire */,
 				8466F4641E1C54A9003B531D /* AppDelegate.swift */,
-				8466F4661E1C54A9003B531D /* ViewController.swift */,
-				8466F4681E1C54A9003B531D /* Main.storyboard */,
-				8466F46B1E1C54A9003B531D /* Assets.xcassets */,
-				8466F46D1E1C54A9003B531D /* LaunchScreen.storyboard */,
+				8466F4941E1CDEF2003B531D /* search-Bridging-Header.h */,
 				8466F4761E1C5637003B531D /* GoogleService-Info.plist */,
 				8466F4701E1C54A9003B531D /* Info.plist */,
-				8466F4941E1CDEF2003B531D /* search-Bridging-Header.h */,
+				8466F46B1E1C54A9003B531D /* Assets.xcassets */,
+				8466F46D1E1C54A9003B531D /* LaunchScreen.storyboard */,
+				8466F4681E1C54A9003B531D /* Main.storyboard */,
 			);
 			path = search;
 			sourceTree = "<group>";
@@ -141,6 +144,24 @@
 				8466F4891E1C5893003B531D /* GFQuery.m */,
 			);
 			path = Implementation;
+			sourceTree = "<group>";
+		};
+		8466F4981E1E532F003B531D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8466F4661E1C54A9003B531D /* ViewController.swift */,
+			);
+			name = Controller;
+			path = GeoFire;
+			sourceTree = "<group>";
+		};
+		8466F4991E1E5336003B531D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8466F49A1E1E53A8003B531D /* PokeAnnotation.swift */,
+			);
+			name = Model;
+			path = GeoFire;
 			sourceTree = "<group>";
 		};
 		D484EFBA0A8A128A0785A4EC /* Pods */ = {
@@ -278,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8466F48B1E1C5893003B531D /* GFBase32Utils.m in Sources */,
+				8466F49B1E1E53A8003B531D /* PokeAnnotation.swift in Sources */,
 				8466F4671E1C54A9003B531D /* ViewController.swift in Sources */,
 				8466F48C1E1C5893003B531D /* GFGeoHash.m in Sources */,
 				8466F4651E1C54A9003B531D /* AppDelegate.swift in Sources */,
@@ -409,7 +431,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3CHDUXG2E8;
 				INFOPLIST_FILE = search/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skaz.search;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -425,7 +447,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3CHDUXG2E8;
 				INFOPLIST_FILE = search/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skaz.search;
 				PRODUCT_NAME = "$(TARGET_NAME)";
